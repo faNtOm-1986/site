@@ -1,110 +1,33 @@
-body {
-	background-color: #253238;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
+* {
+	box-sizing: border-box;
+	color: white;
+	font-family: 'Montserrat';
 }
 
-a {
-	display: inline-block;
-	padding: 10px 30px;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-family: 'Segoe UI';
-	font-size: 100%;
-	font-weight: 100;
-	color: #3CF2FF;
-	position: relative;
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.main {
+	background-color: #212121;
+	min-height: 100vh;
 	overflow: hidden;
 }
 
-.line-top {
-	display: block;
-	position: absolute;
-	background: linear-gradient(90deg, transparent, #3CF2FF);
-	left: -100%;
-	height: 2px;
-	width: 100%;
-	top: 0;
+header {
+	width: 100vw;
+	background-color: #263238;
+	padding: 5vh 5vw;
 }
 
-a:hover .line-top {
-	left: 100%;
-	transition: all 1s;
+footer {
+	width: 100vw;
+	background-color: #263238;
+	padding: 5vh 5vw;
 }
 
-.line-bottom {
-	display: block;
-	position: absolute;
-	background: linear-gradient(-90deg, transparent, #3CF2FF);
-	left: 100%;
-	height: 2px;
-	width: 100%;
-	bottom: 0;
-}
-
-a:hover .line-bottom {
-	left: -100%;
-	transition: all 1s;
-}
-
-
-
-
-
-
-
-
-.line-left {
-	display: block;
-	position: absolute;
-	background: linear-gradient(90deg, transparent, #2CE2EF);
-	left: -100%;
-	height: 100%;
-	width: 100%;
-	top: 0;
-}
-
-a:hover .line-left {
-	left: 100%;
-	transition: all 1s;
-}
-
-.line-right {
-	display: block;
-	position: absolute;
-	background: linear-gradient(-90deg, transparent, #2CE2EF);
-	left: 100%;
-	height: 100%;
-	width: 100%;
-	top: 0;
-}
-
-a:hover .line-right {
-	left: -100%;
-	transition: all 1s;
-}
-
-@keyframes colorize{
-	0% {
-		color: #3CF2FF;
-		box-shadow: 0px 0px 5px #3CF2FF;
-	}
-
-	50% {
-		color: white;
-		box-shadow: 0px 0px 30px #3CF2FF;
-	}
-
-	100% {
-		color: #3CF2FF;
-		box-shadow: 0px 0px 5px #3CF2FF;
-	}
-}
-
-a:hover {
-	animation: colorize 0.75s;
-	animation-iteration-count: infinite;
-	box-shadow: 0px 0px 5px #3CF2FF;
+.content {
+	padding: 5vh 10vw;
+	min-height: 90vh;
 }
