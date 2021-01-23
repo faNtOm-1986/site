@@ -1,33 +1,152 @@
 * {
 	box-sizing: border-box;
-	color: white;
 	font-family: 'Montserrat';
 }
 
 body {
+    color: white;
 	margin: 0;
 	padding: 0;
+	/*background-color: #E2E0E4;*/
+    background: linear-gradient(90deg, #8E2DE2, #4A00E0);
 }
 
 .main {
-	background-color: #212121;
-	min-height: 100vh;
+	margin-top: 0vh;
+	margin-left: 5vw;
+	width: 90vw;
+	height: 200vh;
 	overflow: hidden;
 }
 
-header {
-	width: 100vw;
-	background-color: #263238;
-	padding: 5vh 5vw;
+h2 {
+	font-weight: 800;
+	letter-spacing: 1px;
 }
 
-footer {
-	width: 100vw;
-	background-color: #263238;
-	padding: 5vh 5vw;
+.calc {
+	display: flex;
+	justify-content: left;
+	width: 100%;
 }
 
-.content {
-	padding: 5vh 10vw;
-	min-height: 90vh;
+.calc > div {
+	margin: 5vh 0vw;
+	margin-right: 5vw;
+	max-width: 25vw;
+	width: 20vw;
+}
+
+.calc > div > p.title {
+	font-weight: 500;
+}
+
+.calc > div > input {
+	margin-top: 2vh;
+	margin-bottom: 1vh;
+	padding: 15px 20px;
+	width: 100%;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+	transition: box-shadow 1s;
+	outline:none;
+	font-weight: 600;
+}
+
+.calc > div > input::placeholder {
+	font-weight: 400;
+}
+
+.calc > div > input:focus {
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.calc > div.statistics {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.calc > div.statistics > p.money {
+	font-weight: 800;
+	font-size: 200%;
+	margin: 0;
+}
+
+input[type=range] {
+	width: 45vw;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+	border: none;
+	border-radius: 1000px;
+	height: 3px;
+	background-color: rgba(0, 0, 0, 0.3);
+	outline:none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+	border-radius: 1000px;
+	cursor: pointer;
+	width:15px;
+	height: 15px;
+	-webkit-appearance: none;
+	margin-top: -6px;
+	background: white;
+	outline:none;
+}
+
+input[type=range]::-moz-range-track {
+	border: none;
+	border-radius: 1000px;
+	height: 3px;
+	background-color: rgba(0, 0, 0, 0.3);
+	outline:none;
+}
+
+input[type=range]::-moz-range-thumb {
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+	border-radius: 1000px;
+	cursor: pointer;
+	width:15px;
+	height: 15px;
+	-webkit-appearance: none;
+	margin-top: -7.5px;
+	background: white;
+	outline:none;
+}
+
+input[type=range]:focus {
+	outline: none;
+}
+
+h4 {
+	font-weight: 500;
+}
+
+.range > p {
+	text-align: center;
+	width: 45vw;
+}
+
+.result {
+	display: flex;
+	width: 45vw;
+	justify-content: space-between;
+}
+
+
+
+.result > div {
+	flex: 1;
+}
+
+.result > div:nth-child(2) {
+	flex: 1;
+	padding-left: 5vw;
 }

@@ -1,23 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 </head>
 <body>
-	<div class="main">
-		<header>
-			Learning JavaScript
-		</header>
-		<div class="content" id="content">
-			Content
-		</div>
-		<footer>
-			End Learning JavaScript
-		</footer>
-	</div>
-	<script type="text/javascript" src="app.js"></script>
+    <div class="main">
+        <h2>Калькулятор дохода</h2>
+        <div class="calc">
+            <div class="in">
+                <p class="title">Доход в месяц:</p>
+                <input class="calc_input" type="text" placeholder="Зарплата" name="main_money"'>
+                <input class="calc_input" type="text" placeholder="Фриланс" name="freelance">
+                <input class="calc_input" type="text" placeholder="Доп. доход" name="sub_money_1">
+                <input class="calc_input" type="text" placeholder="Доп. доход" name="sub_money_2">
+            </div>
+            <div class="out">
+                <p class="title">Обязательные расходы:</p>
+                <input class="calc_input" type="text" placeholder="Аренда квартиры" name="home">
+                <input class="calc_input" type="text" placeholder="ЖКХ" name="jkh">
+                <input class="calc_input" type="text" placeholder="Транспорт" name="car">
+                <input class="calc_input" type="text" placeholder="Кредиты" name="credits">
+            </div>
+            <div class="statistics">
+                <p class="title">Доступно в месяц:</p>
+                <p class="money">0</p>
+                <p class="title">Доступно в день:</p>
+                <p class="money">0</p>
+                <p class="title">Накопим за год:</p>
+                <p class="money">0</p>
+            </div>
+        </div>
+        <h4>Сколько откладываем в копилку:</h4>
+        <div class="range">
+            <input type="range" min="0" max="100" step="1" value="0" name="percent">
+            <p>0%</p>
+        </div>
+        <div class="result">
+            <div>Копим: 0</div>
+            <div>Остаётся: 0</div>
+        </div>
+    </div>
 </body>
 </html>
